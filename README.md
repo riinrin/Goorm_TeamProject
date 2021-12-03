@@ -62,3 +62,35 @@
 <br>
 
 ### 4. Model Training & HyperParameter Tuning
+#### Bert
+- batch size가 증가할 때 accuracy 증가
+- weight decay 적용 시 accuracy 증가
+- 둘 다 적용하여 실험한 결과 하나씩 적용하였을 때보다 증가하는 추세를 보이지는 않음
+
+#### XLNet
+- batch size가 증가할 때 accuracy 증가
+- weight decay 적용 시 accuracy 증가
+
+#### Bart
+- Bart-base가 Bart-Large보다 좋은 성능을 보임
+- Learning rate Scheduler 적용 시 accuracy 증가
+
+#### RoBERTa(최종 선택 모델)
+- batch size가 증가할 때 accuracy 증가
+- RoBERTa-large가 RoBERTa-base보다 좋은 성능을 보임
+- batch size를 256으로 적용했을 때 가장 높은 accuracy(0.991)를 보임
+<br>
+
+### 5. 자체 평가 및 보완 사항
+#### 1. 다양한 모델 활용
+- 다양한 모델을 적용해 보면서 각 모델의 특성에 대해 파악하고, 문제에 적합한 최적의 모델을 찾을 수 있었다.
+
+#### 2. GPU 메모리 용량 제한
+- GPU 메모리의 한계로 input data의 max_lenght를 늘리는데 한계가 있었고, batch size에도 제한이 있어 아쉬움
+
+#### 3. HyperParameter Tuning
+- Learning rate, epoch, regularization등의 파라미터 튜닝을 다양하게 진행하여 더욱 좋은 결과를 찾아낼 수 있을 것 같다.
+
+#### 4. Esemble 적용
+- 모델에 대해 Esemble을 적용하여 더욱 좋은 결과를 얻을 수 있을 것이다.
+---
